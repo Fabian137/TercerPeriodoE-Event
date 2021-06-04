@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{font-family: 'system-ui';}
+    </style>
+    <div class="cont bots">
+        <a class="btn2 colpse" id="colapsar">Ocultar</a>
+          <a class="btn2 uno" id="bot1" onclick="saludar()">Morado(?)</a>
+          <a class="btn2 dos" id="bot2" onclick="despedir()">Rojo</a>
+          <a class="waves-effect waves-light btn2 dos" id="button" onclick="refreshPage()">RESTART</a>
+      </div>
+    <div class="cont wns">
+        <div><img class="img-s" src="../img/cerebro.png"> <h3 class="wnsc">Usuario</h3></div>
+        <div><img class="img-s" src="../img/superhero.png"><h3 class="wnsc2">Máquina</h3></div>
+    </div>
+    <div class="template" id="templ">
+        <div class="format">
+          
+            <h3 class="result">
+            </h3>
+            <div class="inpts">
+                <div class="options">
+                    <a onclick="piedra()"><img class="img-s" src="../img/motivacion.png" alt=""></a>
+                    <a onclick="papel()"><img class="img-s" src="../img/mano-robotica.png" alt=""></a>
+                    <a onclick="tijeras()"><img class="img-s" src="../img/tijeras.svg" alt=""></a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="javaScript/event.js"></script>
+    <script src="javaScript/game.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+.cont{margin:0 5%;}
+.btn{background-color: #eedddd0e;}
+a{
+  text-decoration: none;
+  color: #fff;
+}
+ul{list-style: none;}
+.logo{font-size: 2rem;}
+@media (min-width: 320px) and (max-width:767px){
+.nav-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+nav{height: 14vh;}
+}
+.btn:hover{background-color: #0000009b;}
+.btn2:hover{background-color: #0000009b;}
+nav{background-color: #0b2ea113;}
+.bots{
+  margin: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.formulario{margin-top:2.5rem;}
+body{background-color: #0e1014; color:rgb(255, 255, 255);}
+.seccion3{color:darkgray}
+.card .card-image img{height: 15rem;}
+.card .card-content{margin-bottom: 7%;}
+/*CALCULADORA*/
+.template{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+input:focus{
+  border-bottom: 3.5px solid #ffc400;
+  border-top: 3.5px solid #ffc400;
+}
+.inpts{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;  
+}
+input{
+  background-color: transparent;
+  border-style: none;
+  outline: none;
+  border-bottom: 1.5px solid #deebec;
+  border-top: 1.5px solid #deebec;
+  color: white;
+  height: 2rem;
+  text-align: center;
+}
+input:hover{
+  border-bottom: 3.5px solid #ffc400;
+  border-top: 3.5px solid #ffc400;
+}
+.btn2{
+  background-color: #eedddd0e;
+  padding: 0.5rem 1rem;
+  -webkit-transition: .3s ease-out;
+  text-transform: uppercase;
+}
+.in-c{
+  margin: 0rem 1rem;
+  width: 15%;
+}
+.btn2, .result, nav{
+  border-radius: 4px;
+  box-shadow: 0 2px 2px 0 rgba(19, 19, 19, 0.157),
+  0 3px 1px -2px rgba(0, 0, 0, 0.116),
+  0 1px 5px 0 rgba(0, 0, 0, 0.219);
+}
+.result{
+  font-size:2rem;
+  padding: 1rem 0.5rem;
+  text-align: center;
+  color: #ffc400;
+}
+.format{flex-direction: column;}
+p{margin:0;}
+.btn-p{
+  margin-top: 2rem;
+  display:flex;
+  justify-content: space-around;
+}
+nav .nav-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/*GAME*/
+.img-s{width:5rem;}
+.options{
+  display: flex;
+  justify-content: space-between;
+  width: 40rem;
+}
+.wns{
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
