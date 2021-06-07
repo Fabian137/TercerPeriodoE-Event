@@ -1,8 +1,10 @@
 <?php
 require_once 'vendor/autoload.php';
-
+require_once 'template.php';
+// use template;
 use Illuminate\Database\Capsule\Manager as Capsule;
 use App\Models\register;
+// use Illuminate\Database\Eloquent\Model;
 
 $capsule = new Capsule;
 
@@ -42,39 +44,37 @@ if(!empty($_POST)){
     <title>Document</title>
 </head>
 <body>
-    <?php  ?>
-    <nav>
-        <div class="nav-wrapper cont">
-          <div><a href="#" class="logo">Inicio</a></div>
-          <div class="naveg"></div>
-        </div>
-    </nav>
+    <nav class="colorfont">
+      <div class="nav-wrapper cont">
+      <div><a href="../../EvERI" class="logo">Inicio</a></div>
+      <div class="naveg"></div>
+      </div> 
+      </nav>
       <div class="cont bots">
-        <a class="waves-effect waves-light btn colpse" id="colapsar">Ocultar</a>
-          <a class="waves-effect waves-light btn uno" id="bot1" onclick="saludar()">Morado(?)</a>
-          <a class="waves-effect waves-light btn dos" id="bot2" onclick="despedir()">Rojo</a>
+      <a class="btn2 colpse" id="colapsar">Ocultar</a>
+      <a class="btn2 uno" id="bot1" onclick="saludar()">Morado(?)</a>
+      <a class="btn2 dos" id="bot2" onclick="despedir()">Rojo</a>
       </div>
-
       <section class="formulario">
         <div class="row">
           <div class="col m2 l2"></div>
           <form id="forms" class="col s12 m8 l8" action="index.php" method="post">
             <div class="row">
               <div class="input-field col s6 ">
-                <input name="nombre" placeholder="Nombre" id="first_name" type="text" class="validate">
+                <input name='nombre' placeholder="Nombre" id="first_name" type="text" class="validate">
               </div>
               <div class="input-field col s6">
-                <input placeholder="Apellidos" name="apellido" id="last_name" type="text" class="validate">
+                <input placeholder="Apellidos" name='apellido' id="last_name" type="text" class="validate">
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <input placeholder="Correo" id="email" name="correo" type="email" class="validate">
+                <input placeholder="Correo" id="email" name='correo' type="email" class="validate">
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <input placeholder="Contraseña" id="password" name="password" type="password" class="validate">
+                <input name='password' placeholder="Contraseña" id="password" type="password" class="validate">
               </div>
             </div>
             <label>
@@ -85,7 +85,7 @@ if(!empty($_POST)){
               <input type="checkbox" id="check2" />
               <span>No soy un robot</span>
             </label><br><br>
-            <input class="waves-effect waves-light btn" id="send" type="submit" value="submit">
+            <input class="btn" id="send" type="submit" value="submit"><br>
           </form>
         </div>
 
@@ -97,9 +97,13 @@ if(!empty($_POST)){
           </div>
           <div class="col m2 l2"></div>
         </div>
-      </section>  
+      </section>
+
+      <?php 
+      templFooter();
+      ?>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       <script type="text/javascript" src="assets/javaScript/event.js"></script>
-      <script src="script.js"></script>
+      <!-- <script src="script.js"></script> -->
 </body>
 </html>

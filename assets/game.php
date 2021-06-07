@@ -1,22 +1,24 @@
+<?php
+    require_once '../template.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="../style.css">
     <title>Document</title>
 </head>
 <body>
     <style>
         body{font-family: 'system-ui';}
     </style>
-    <div class="cont bots">
-        <a class="btn2 colpse" id="colapsar">Ocultar</a>
-          <a class="btn2 uno" id="bot1" onclick="saludar()">Morado(?)</a>
-          <a class="btn2 dos" id="bot2" onclick="despedir()">Rojo</a>
+    <?php
+    template();
+    ?>
           <a class="waves-effect waves-light btn2 dos" id="button" onclick="refreshPage()">RESTART</a>
-      </div>
     <div class="cont wns">
         <div><img class="img-s" src="../img/cerebro.png"> <h3 class="wnsc">Usuario</h3></div>
         <div><img class="img-s" src="../img/superhero.png"><h3 class="wnsc2">Máquina</h3></div>
@@ -36,7 +38,38 @@
             </div>
         </div>
     </div>
-    <script src="javaScript/event.js"></script>
+
+    <?php
+    templFooter();
+    ?>
+
     <script src="javaScript/game.js"></script>
+    <script>
+        let body=document.querySelector('body');
+        function saludar(){
+            body.style.background='#4b3f98';
+        }
+        function despedir(){
+            body.style.background='#aa002a'; 
+        }
+        const magic = document.querySelector('.colpse');
+        magic.addEventListener('click', hide);
+        const bot1 = document.querySelector('.uno');
+        const bot2 = document.querySelector('.dos');
+        //magic.addEventListener('click', hide);
+
+        function hide(){
+            if(bot1.style.display != 'none'){
+                magic.textContent = 'Mostrar';
+                bot1.style.display = 'none';
+                bot2.style.display = 'none';         
+            }
+            else{
+                magic.textContent = 'Ocultar';
+                bot1.style.display = 'block';
+                bot2.style.display = 'block';
+            }
+        }
+    </script>
 </body>
 </html>

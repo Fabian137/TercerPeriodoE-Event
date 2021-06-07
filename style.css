@@ -17,9 +17,9 @@ nav{height: 14vh;}
 }
 .btn:hover{background-color: #0000009b;}
 .btn2:hover{background-color: #0000009b;}
-nav{background-color: #0b2ea113;}
+.colorfont{background-color: #0b2ea113;}
 .bots{
-  margin: 2.5rem;
+  margin: 1rem;
   display: flex;
   justify-content: space-between;
 }
@@ -35,7 +35,7 @@ body{background-color: #0e1014; color:rgb(255, 255, 255);}
   align-items: center;
   height: 50vh;
 }
-input:focus{
+.inputa:focus{
   border-bottom: 3.5px solid #ffc400;
   border-top: 3.5px solid #ffc400;
 }
@@ -44,7 +44,7 @@ input:focus{
   justify-content: center;
   flex-direction: row;  
 }
-input{
+.inputa{
   background-color: transparent;
   border-style: none;
   outline: none;
@@ -54,7 +54,7 @@ input{
   height: 2rem;
   text-align: center;
 }
-input:hover{
+.inputa:hover{
   border-bottom: 3.5px solid #ffc400;
   border-top: 3.5px solid #ffc400;
 }
@@ -63,6 +63,7 @@ input:hover{
   padding: 0.5rem 1rem;
   -webkit-transition: .3s ease-out;
   text-transform: uppercase;
+  cursor: pointer;
 }
 .in-c{
   margin: 0rem 1rem;

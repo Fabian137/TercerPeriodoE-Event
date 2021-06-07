@@ -1,5 +1,3 @@
-/*const btn1=document.getElementById('adio');
-const btn2=document.getElementById('Hi');*/
 let body=document.querySelector('body');
 function saludar(){
     body.style.background='#4b3f98';
@@ -48,8 +46,8 @@ const sect3=document.querySelector('.seccion3');//Guardamos el div con sección3
 const opciones=document.querySelector('.naveg');
 const forms=document.getElementById ('forms'); //Guardamos el formulario
 //Aqui se aceptan los términos y condiciones
-forms.addEventListener('submit', function(e){
-    e.preventDefault();
+forms.addEventListener('submit', function(){
+    // e.preventDefault();
     let name = document.getElementById('first_name').value;
     let apellidos = document.getElementById('last_name').value;
     let correo=document.getElementById('email').value;
@@ -61,9 +59,9 @@ forms.addEventListener('submit', function(e){
         //Barra de navegación
         let html=`
         <ul id="nav-mobile">
-        <li><a href="../html/calculadora.html">Calculadora</a></li>
-        <li><a href="badges.html">Divisas</a></li>
-        <li><a href="../html/game.html">Game</a></li>
+        <li><a href="assets/calculadora.php">Calculadora</a></li>
+        <li><a href="assets/divisas.php">Divisas</a></li>
+        <li><a href="assets/game.php">Game</a></li>
       </ul>`
       opciones.innerHTML = html;
     }
@@ -79,10 +77,10 @@ function agregarText(name, apellidos,correo){
     let html =`
     <div class="card">
     <div class="card-image imsize">
-      <img src="../img/imagerec.jpeg">
+      <img src="img/imagerec.jpeg">
         <span class="card-title">
         <div class="card-content">
-        <p>Hola ${name} ${apellidos} <br> Ingresaste con el correo: ${correo}</p>
+        <p style="font-weight:450;">Hola ${name} ${apellidos} <br> Ingresaste con el correo: ${correo}</p>
         </div>
       </span>
     </div>

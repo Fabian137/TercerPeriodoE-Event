@@ -1,4 +1,4 @@
-let body=document.querySelector('body');
+let body=document.querySelector('.body');
 function saludar(){
     body.style.background='#4b3f98';
 }
@@ -77,7 +77,7 @@ function agregarText(name, apellidos,correo){
     let html =`
     <div class="card">
     <div class="card-image imsize">
-      <img src="../img/imagerec.jpeg">
+      <img src="img/imagerec.jpeg">
         <span class="card-title">
         <div class="card-content">
         <p>Hola ${name} ${apellidos} <br> Ingresaste con el correo: ${correo}</p>

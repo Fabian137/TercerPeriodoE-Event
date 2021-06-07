@@ -1,25 +1,25 @@
-<?
+<?php
 namespace App\Models;
-
-class BaseElement/*implements Interfaz*/{ 
+// implements 
+class BaseElement{ 
     public $nombre;
     public $apellido;
     public $correo;
     public $password;
 
-    /*public function __construct($nombre,$apellido){
+    public function __construct($nombre,$apellido){
         $this->nombre = $nombre;
         $this->apellido = $apellido;
-    }*/
+    }
 
-    /*public function setTitle($nombre){
+    public function setTitle($nombre){
         $this->nombre = $nombre;
         if($nombre == ' '){
             $this -> nombre = 'N/A';
         }else{
             $this -> nombre = $nombre;
         }
-    }*/
+    }
     
     public function getName(){
         return $this->nombre;
