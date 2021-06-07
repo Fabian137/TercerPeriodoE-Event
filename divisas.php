@@ -1,25 +1,17 @@
 <?php
 require_once 'template.php';
-    if($_POST){
-        $dinero=$_POST['dinero'];
-        $dat=$_POST['dat'];
-
-        if($dat==1){
-            $dol=$dinero/24.5;  
-            $eur=$dinero/30; 
-            echo "<h2>Dolares ".round($dol,2)."</h2>";
-            echo "<h2>Euros ".round($eur,2)."</h2>";
-        }
-        if($dat==2){
-            $dol=$dinero*30/24.5;
-            echo "<h2>Dolares ".round($dol,2)."</h2>";
-            
-        }
-        if($dat==3){
-            $eur=$dinero*24.5/30;
-                echo "<h2>Euros ".round($eur,2)."</h2>";
-        }
+function convertir(){
+    if(!empty($_POST)){
+    $cant = $_POST['cant'];
+    $dolar = $cant/19;
+    $euro = $cant/24;
+    $bit = $cant*0.0000014;
+    echo "<td>La cantidad ingresada en pesos fue: ". $cant ."</td><br>";
+    echo "<td>Dolares: $".round($dolar,2)."</td><br>";
+    echo "<td>Euros: $".round($euro,2)."</td><br>";
+    echo "<td>Bitcoin: $".round($bit,2)."</td>";
     }
+}
 ?>
 
 <!DOCTYPE html>
@@ -28,43 +20,32 @@ require_once 'template.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Convertidor de monedas</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="style.css">
+    <title>Convertidor de monedas</title>
 </head>
 <body>
 <?php
-    template();
-    ?>
-    <section class="container">
-    <h1>Coversos de Divisas</h1>
-    <form action="divisas.php" method="POST">
-    <table>
-        <tr>
-            <td">Cantidad:</td>
-            <td><input style="color: white;" type="number" name="dinero"></td>
-        </tr>
-        <tr>
-            <td>Moneda:</td>
-            <select class="form-select" id="option-id">
-                    <option selected>Moneda: </option>
-                    <option value="1">Bitcoin</option>
-                    <option value="2">Dólares</option>
-                    <option value="3">Euros</option>
-            </select>
-            <!-- <td>
-                <select style="color: white;" name="dat">
-                    <option value="1">Pesos</option>
-                    <option value="2">Dolares</option>
-                    <option value="3">Euros</option>
-                </select>
-            </td> -->
-        </tr>
-    </table>
-    <input type="submit" value="Covertir">
-    </form>
-    </section>
+template();
+?>
+    <section class='container'>
+        <h1>Conversor de divisas</h1>
+        <form action="divisas.php" method="post">
+        <div style="display:flex; justify content: space-evenly; align-items:center;">
+                    <p>Cantidad en Pesos:</p>
+                    <input style="margin-left:5rem; color:#FFF;" type="number" name="cant">
+        </div><br>
 
+
+                    <?php
+                    convertir();
+                    ?>
+            <br><br><input type="submit" class="btn" value="Covertir">
+        </form>
+    </section><br>
+    <?php
+templFooter();
+    ?>
     <script>
         let body=document.querySelector('body');
         function saludar(){
