@@ -22,13 +22,16 @@ $capsule->addConnection([
 $capsule->setAsGlobal();
 $capsule->bootEloquent();
     
+$msg = '';
+
 if(!empty($_POST)){
     $registro = new register();
     $registro->nombre = $_POST['nombre'];
     $registro->apellido = $_POST['apellido'];
     $registro->correo = $_POST['correo'];
-    $registro-> password = $_POST['password'];;
+    $registro-> password =  password_hash($_POST['password'], PASSWORD_DEFAULT);
     $registro->save();
+    $msg = "Usuario registrado, ingrese haciendo click aquí <a href='login.php'>Login</a>";
 }
 
 ?>
@@ -86,6 +89,9 @@ if(!empty($_POST)){
               <span>No soy un robot</span>
             </label><br><br>
             <input class="btn" id="send" type="submit" value="submit"><br>
+            <div style="color: red;">
+            <?php echo $msg ?>
+            </div>
           </form>
         </div>
 
